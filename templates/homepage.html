@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Adrian Nadarajah</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Space+Mono&display=swap');
+    </style>
+  </head>
+  <body/>
+    <main>
+      <div id = "header-section-1">
+        <h1 id = "text-name">Adrian Nadarajah.</h1>
+        <img id = "headshot"
+             src = "{{url_for('static', filename = 'headshot.jpg')}}"
+             alt = "Headshot of Adrian Nadarajah"/>
+      </div>
+      <div id = "contact-section">
+        <div id = "phone">
+          <span id = "telephone-icon" class="material-symbols-outlined">
+            call
+          </span>
+          <p class = "telephone-number" id = "telephone-number">
+            (647)-836-6152
+          </p>
+        </div>
+        <div id = "email">
+          <a href = "mailto:adriannadarajah@gmail.com">
+            <span id = "email-icon" class = "material-symbols-outlined">
+              mail
+            </span>
+          </a>
+          <p class = "email" id = "email">
+              E-mail
+          </p>
+        </div>
+        <div id ="linkedin">
+          <a href = "https://www.linkedin.com/in/adrian-nadarajah-90a39a70/"
+             target = "_blank">
+            <span id = "linkedin-icon" class = "material-symbols-outlined">
+             group
+            </span>
+          </a>
+          <p class = "linkedin" id = "linkedin">
+            Linkedin
+          </p>
+        </div>
+      </div>
+      <div id = "header-section-2">
+        <h2 id = "text-description-1">Data Analyst</h2>
+        <h2 id = "text-description-2">Creative Problem Solver</h2>
+        <h2 id = "text-description-3">Sports & Basketball Enthusiast</h3>
+      </div>
+    </main>
+    <script src = "{{ url_for('static', filename = 'app.js')}}"></script>
+  </body>
+</html>

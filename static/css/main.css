@@ -1,0 +1,260 @@
+/* 
+Remeber what we learned from Learn CSS
+
+What are the type of selectors:
+
+(1) Universal Selector 
+    ex) * {
+        font-family:sans-serif;
+    }
+    -- Selects ALL elements on the html page and selects their font to sans-serif
+
+(2) Type Selector
+    ex) p {
+        font-family:sans-serif;
+    }
+    -- Selects ALL "<p>" elements on the html page and selects their font to sans-serif
+    
+(3) Class Selector
+    ex) .my-class {
+        font-family:sans-serif;
+        font-color:red;
+    }
+    -- Selects ALL html elements on the page where the class attribute for that html element CONTAINS the defined class
+    -- (in this case "my-class")
+
+(4) ID Selector
+    ex) #rad {
+        font-family:sans-serif;
+    }
+    -- Selects the html element on the page with the id attribute set to the "rad" and sets the font to sans-serif.
+    -- Theoretically id attribtues must be unique for all html elements on the page.
+
+(5) Attribute Selector
+    **Applies when we want to select specific attributes from an html element. (4) classes and (5) ids are attribtues of
+    html elements, but there are others. And we can apply CSS rules to them via attribute selectors
+    ex) [datatype = "primary"] {
+        font-family:sans-serif;
+    }
+    -- Selects ALL html elements on the page that has an attribute-value of "data-type" with a value of "primary"
+    -- the attribute and the attribute value specified must match together for any respective html element. 
+
+Grouping Selectors:
+A selector doesn't have to match only a single element. You can group multiple selectors by separating them with commas.
+    ex) strong,
+        em,
+        .my-class,
+        [lang] {
+            color:red;
+            {
+This CSS rule extends the color change to both <strong> and <em> elements>. It also extends to a class name .my-class,
+and an element that has an lang attribute.
+
+
+Pseudo-classes and pseudo-elements:
+CSS provides usefuls selector types that focus on specific platform state, like when an element is hovered, structures inside an 
+element, or parts of an element.
+
+Pseudo Classes: 
+HTML elements find themselves in various states, eitehr because they are
+interacted with, or one of their child elements is in a certain state.
+
+For example, an HTML element could be hovered with the mouse pointer by a user or
+a child element could also be hovered by the user. For those situations, use the ":hover" pseudo-class
+
+    ex) a:hover {
+        outline: 1px dotted green;
+        {
+
+
+Pseudo Elements:
+A pseudo-element is like adding or targeting an extra element without having to add
+more HTML. They have a variety of roles.
+
+    ex) p::first-letter{
+        color:red;
+        font-family:sans-serif;
+        }
+    The first letter of the "p" element has it's letter changed to red and the font is sans-serif.
+*/
+
+h1 {
+  font-family: "Space Mono", monospace;
+  color: white;
+  font-size: 58px;
+  width: 280px;
+  margin-top: 3.5vw;
+}
+
+h2 {
+  font-family: "Space Mono", monospace;
+  color: white;
+  font-size: 26px;
+}
+
+p.middle-section {
+  font-family: monospace;
+  color: white;
+  font-size: 28px;
+}
+
+body {
+  background-color: black;
+}
+
+#header-section-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 75px;
+  justify-content: center;
+  margin-top: 5vw;
+}
+
+#contact-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: 33.3vw;
+  gap: 2vw;
+}
+
+#phone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+span#telephone-icon {
+  border: 2px solid yellow;
+}
+
+span#email-icon {
+  border: 2px solid red;
+}
+
+span#linkedin-icon {
+  border: 2px solid blue;
+}
+
+#email {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.material-symbols-outlined {
+  color: white;
+  animation: fadeIn 10s forwards;
+}
+
+p.telephone-number {
+  font-family: "Space Mono" monospace;
+  color: white;
+  font-size: 16px;
+  margin-top: 0.8vw;
+  animation: fadeIn 10s forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+p#email {
+  font-family: "Space Mono" monospace;
+  color: white;
+  font-size: 16px;
+  margin-top: 0.7vw;
+  animation: fadeIn 10s forwards;
+}
+
+p#linkedin {
+  font-family: "Space Mono" monospace;
+  color: white;
+  font-size: 16px;
+  margin-top: 0.7vw;
+  animation: fadeIn 10s forwards;
+}
+
+#header-section-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 33.3vw;
+  row-gap: -10px;
+}
+
+#text-description-1 {
+  font-size: 20px;
+  color: white;
+  overflow: hidden;
+  animation: typing1 3.5s steps(40, end), blink-caret 0.65s step-end 6;
+  white-space: nowrap;
+  border-right: 0.15em solid transparent;
+  width: 8.5vw;
+}
+@keyframes typing1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8.5vw;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: orange;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+#text-description-2 {
+  font-size: 20px;
+  color: white;
+  overflow: hidden;
+  animation: typing2 3.5s steps(40, end), blink-caret 0.65s step-end 6;
+  white-space: nowrap;
+  border-right: 0.15em solid transparent;
+  width: 16.5vw;
+  margin-top: -1vw;
+}
+@keyframes typing2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16.5vw;
+  }
+}
+
+#text-description-3 {
+  font-size: 20px;
+  color: white;
+  overflow: hidden;
+  animation: typing3 3.5s steps(40, end), blink-caret 0.65s step-end 6;
+  white-space: nowrap;
+  border-right: 0.15em solid transparent;
+  width: 21vw;
+  margin-top: -1vw;
+}
+@keyframes typing3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 21vw;
+  }
+}
+
+#headshot {
+  border-radius: 50%;
+  height: 230px;
+  width: 230px;
+  margin-top: 2.5vw;
+}
