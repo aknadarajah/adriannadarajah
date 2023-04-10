@@ -1,7 +1,5 @@
-import altair as alt
-import datapane as dp
 from flask import Flask, render_template
-from vega_datasets import data
+
 
 app = Flask(__name__)
 
